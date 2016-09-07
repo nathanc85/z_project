@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Monthly earning feature.
+ */
+
+include_once 'monthly_earning.features.inc';
