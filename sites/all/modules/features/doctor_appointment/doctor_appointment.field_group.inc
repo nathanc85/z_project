@@ -26,6 +26,7 @@ function doctor_appointment_field_group_info() {
       0 => 'field_date',
       1 => 'field_doctor_name',
       2 => 'field_details',
+      3 => 'field_doctor_user',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

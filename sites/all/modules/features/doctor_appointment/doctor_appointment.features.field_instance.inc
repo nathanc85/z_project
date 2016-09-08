@@ -202,7 +202,7 @@ function doctor_appointment_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -243,6 +243,45 @@ function doctor_appointment_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-doctor_appointment-field_doctor_user'.
+  $field_instances['node-doctor_appointment-field_doctor_user'] = array(
+    'bundle' => 'doctor_appointment',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_doctor_user',
+    'label' => 'Doctor User',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 7,
     ),
   );
 
@@ -330,6 +369,7 @@ function doctor_appointment_field_default_field_instances() {
   t('Date of Birth');
   t('Details');
   t('Doctor Name');
+  t('Doctor User');
   t('Name');
   t('Sex Option');
 
