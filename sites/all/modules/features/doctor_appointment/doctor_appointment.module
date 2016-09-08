@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Doctor Appointment feature.
+ */
+
+include_once 'doctor_appointment.features.inc';
