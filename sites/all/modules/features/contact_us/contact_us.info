@@ -1,0 +1,12 @@
+name = Contact Us
+core = 7.x
+package = Features
+dependencies[] = date
+dependencies[] = date_api
+dependencies[] = features
+dependencies[] = number
+dependencies[] = options
+dependencies[] = webform
+features[features_api][] = api:2
+features[node][] = webform
+project path = sites/all/modules/features
