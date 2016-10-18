@@ -1,0 +1,13 @@
+name = Reports Menu
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = menu
+features[features_api][] = api:2
+features[menu_custom][] = menu-reports
+features[menu_links][] = menu-reports_august-earnings:node/2
+features[menu_links][] = menu-reports_contact-us:node/6
+features[menu_links][] = menu-reports_july-earnings:node/3
+features[menu_links][] = menu-reports_september-earnings:node/1
+project path = sites/all/modules/features
