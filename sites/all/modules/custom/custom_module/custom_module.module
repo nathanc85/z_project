@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Module file for custom_module.
+ */
+
+/**
+ * Implements hook_cron().
+ */
+function custom_module_cron() {
+  $date = date('G:i');
+  $to = 'email@yahoo.com';
+  $from = NULL;
+  //if ($date == '15:44') {
+    custom1();
+    //drupal_mail('custom_module', 'custom_module_email1', $to, language_default(), array(), $from);
+  //}
+}
+
+/**
+ * Implements hook_mail().
+ */
+function custom_module_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'custom_module_email1':
+      $message['subject'] = 'Test1 subject1';
+      $message['body'][] = 'First body line.';
+      $message['body'][] = 'Second body line.';
+      break;
+
+    case 'custom_module_email2':
+      $message['subject'] = 'Test2 subject2';
+      $message['body'][] = 'First body line.';
+      $message['body'][] = 'Second body line.';
+      break;
+  }
+}
+
+
+
+function custom1() {
+  $location = drupal_realpath('private://');
+  chdir($location);
+  $filename = 'file.csv';
+  $new_filename = 'nathan_test/Nathan.csv';
+  $work = copy($filename, $new_filename);
+  chdir(DRUPAL_ROOT);
+  drupal_set_message($work);
+}
